@@ -1,0 +1,30 @@
+<div class="row text-center">
+  <div class="col-12 m-3"></div>
+  <b>Exemple of *ngIf vs &#64;if() </b>
+</div>
+
+<div class="row text-center">
+  <div class="col-4">
+    <div><input type="checkbox" (click)="onClick()" /> Terms & conditions</div>
+    @if(isChecked){<button class="btn btn-success">Submit</button>}
+  </div>
+  <div class="col-4">
+    @if(isInputBox){
+    <div class="m-2">
+      <input type="text" value="FEDLearning" />
+    </div>
+    }
+    <button class="btn btn-primary m-2" (click)="showField()">Show</button>
+    <button class="btn btn-danger m-2" (click)="hideField()">Hide</button>
+  </div>
+  <div class="col-4">
+    <input type="text" class="m-1" [(ngModel)]="input1" />
+    <input type="text" class="m-1" [(ngModel)]="input2" />
+    
+    @if(input1 === input2){
+    <p>Both values are equal</p>
+    } @else if(input1 !== input2){
+    <p>Both values are not equal</p>
+    }
+  </div>
+</div>

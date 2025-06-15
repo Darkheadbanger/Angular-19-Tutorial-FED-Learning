@@ -4,10 +4,11 @@ import { RouterOutlet } from '@angular/router';
 import { User } from './user/user';
 import { DataBinding } from './data-binding/data-binding';
 import { AppDirectives } from './app-directives/app-directives';
+import { StructuralDirectiveNgifVsIf } from './structural-directive-ngif-vs-if/structural-directive-ngif-vs-if';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, User, DataBinding, AppDirectives],
+  imports: [RouterOutlet, User, DataBinding, AppDirectives, StructuralDirectiveNgifVsIf],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
