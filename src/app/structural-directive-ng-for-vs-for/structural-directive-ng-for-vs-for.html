@@ -1,1 +1,70 @@
-<p>structural-directive-ng-for-vs-for works!</p>
+<div class="row text-center">
+  <div class="col-12 m-3"></div>
+  <b>Exemple of *ngFor vs for </b>
+</div>
+
+<div class="row text-center">
+  <div class="col-4">
+    <select name="" id="" class="p-2">
+      @for(emp of employees; track emp) {
+      <option [value]="emp.number">
+        {{emp.name}} - {{emp.email}} - {{emp.number}}
+      </option>
+      }
+    </select>
+  </div>
+  <div class="col-4">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Departement</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (emp of employees; track emp.number) {
+        <tr>
+          <td>{{emp.name}}</td>
+          <td>{{emp.number}}</td>
+          <td>{{emp.email}}</td>
+          <td>{{emp.departement}}</td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+  <div class="col-4">
+    <ul>
+      @for (company of companyList; track company; let f=$first; let l=$last;
+      let e=$even) { @if(f == true) {
+      <li style="color: green">
+        <ul>
+          {{ company }}
+        </ul>
+      </li>
+      } @else if(l == true) {
+      <li style="color: red">
+        <ul>
+          {{ company }}
+        </ul>
+      </li>
+      } @else {
+      <li>
+        <ul>
+          {{ company }}
+        </ul>
+      </li>
+      }} @empty { No company found }
+    </ul>
+    <ul>
+      @for (bigFour of thrashBigFour; track bigFour) {
+      <li>
+        <ol>
+          {{ bigFour }}
+        </ol>
+      </li>
+      }
+    </ul>
+  </div>
+</div>
