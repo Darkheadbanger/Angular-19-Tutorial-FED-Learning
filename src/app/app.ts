@@ -7,12 +7,22 @@ import { AppDirectives } from './app-directives/app-directives';
 import { StructuralDirectiveNgifVsIf } from './structural-directive-ngif-vs-if/structural-directive-ngif-vs-if';
 import { StructuralDirectiveNgForVsFor } from './structural-directive-ng-for-vs-for/structural-directive-ng-for-vs-for';
 import { StructuralDirectiveNgswitchVsSwitch } from './structural-directive-ngswitch-vs-switch/structural-directive-ngswitch-vs-switch';
+import { AtributesDirectives } from './atributes-directives/atributes-directives';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, User, DataBinding, AppDirectives, StructuralDirectiveNgifVsIf, StructuralDirectiveNgForVsFor, StructuralDirectiveNgswitchVsSwitch],
+  imports: [
+    RouterOutlet,
+    User,
+    DataBinding,
+    AppDirectives,
+    StructuralDirectiveNgifVsIf,
+    StructuralDirectiveNgForVsFor,
+    StructuralDirectiveNgswitchVsSwitch,
+    AtributesDirectives,
+  ],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
 })
 export class App {
   protected title = 'Angular-19-Tutorial-FED-Learning';

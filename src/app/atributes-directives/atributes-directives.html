@@ -1,0 +1,72 @@
+<div class="row text-center">
+  <div class="col-12 m-3"></div>
+  <b>Exemple attributes diectives - ngClass </b>
+</div>
+
+<div class="row text-center">
+  <div class="col-4">
+    <p [class]="textColor">This is the first exemple of ngClass</p>
+    <br />
+    <button class="btn btn-success m-2" (click)="changeColor('text-success')">
+      Success
+    </button>
+    <button class="btn btn-danger m-2" (click)="changeColor('text-danger')">
+      Danger
+    </button>
+  </div>
+  <div class="col-4">
+    <p [class]="isTextGreen ? 'text-success' : 'text-danger'">
+      This is the second exemple of ngClass
+    </p>
+    <br />
+    <input type="checkbox" [(ngModel)]="isTextGreen" />
+    <label>Green</label>
+  </div>
+  <div class="col-4">
+    <p [class]="userClass">This is the third exemple of ngClass</p>
+    <br />
+    <input
+      type="text"
+      [(ngModel)]="userClass"
+      placeholder="Rx : Test-success"
+    />
+  </div>
+</div>
+
+<div class="row text-center">
+  <div class="col-12 m-3"></div>
+  <b>Exemple attributes diectives - ngStyle </b>
+</div>
+
+<div class="row text-center">
+  <div class="col-4">
+    <h3 [style]="{'color': styleColor, 'font-weight': 'lighter'}">
+      This is the first exemple of ngStyle
+    </h3>
+    <br />
+    <button class="btn btn-warning m-2" (click)="updateColor('orange')">
+      Change to orange
+    </button>
+    <button class="btn btn-primary m-2" (click)="updateColor('blue')">
+      Change to blue
+    </button>
+  </div>
+
+  <div class="col-4">
+    <h3
+      [ngStyle]="{'color': isTextOrange ? 'orange' : 'blue', 'font-weight': 'lighter'}"
+    >
+      This is the second exemple of ngStyle
+    </h3>
+    <br />
+    <input type="checkbox" [(ngModel)]="isTextOrange" /> <span> Change colour to orange </span>
+  </div>
+
+  <div class="col-4">
+    <h3
+      [ngStyle]="customClass"
+    >
+      This is the third exemple of ngStyle
+    </h3>
+  </div>
+</div>
