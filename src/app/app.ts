@@ -1,6 +1,6 @@
 import { Component, NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { User } from './user/user';
 import { DataBinding } from './data-binding/data-binding';
 import { AppDirectives } from './app-directives/app-directives';
@@ -10,11 +10,14 @@ import { StructuralDirectiveNgswitchVsSwitch } from './structural-directive-ngsw
 import { AtributesDirectives } from './atributes-directives/atributes-directives';
 import { Signals } from './signals/signals';
 import { LinkedSignal } from './linked-signal/linked-signal';
+import { PageNotFound } from './page-not-found/page-not-found';
 
 @Component({
   selector: 'app-root',
+  standalone: true, // This is a standalone component
   imports: [
     RouterOutlet,
+    RouterLink,
     User,
     DataBinding,
     AppDirectives,
@@ -24,6 +27,7 @@ import { LinkedSignal } from './linked-signal/linked-signal';
     AtributesDirectives,
     Signals,
     LinkedSignal,
+    PageNotFound,
   ],
   templateUrl: './app.html',
   styleUrl: './app.css',
